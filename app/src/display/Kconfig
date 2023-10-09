@@ -3,7 +3,7 @@
 
 menuconfig ZMK_DISPLAY
     bool "Enable ZMK Display"
-    default n
+    default y
     select DISPLAY
     select LVGL
     select LV_CONF_MINIMAL
@@ -12,7 +12,7 @@ if ZMK_DISPLAY
 
 config ZMK_DISPLAY_BLANK_ON_IDLE
     bool "Blank display on idle"
-    default y if SSD1306
+    default n if SSD1306
 
 if LV_USE_THEME_MONO
 
